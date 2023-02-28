@@ -87,7 +87,7 @@ Use this method to register your Azure subscription and enjoy benefits such as i
     - `pip3 install ansible requests-oauthlib`
 8. Install the insights subscription collection
     - `ansible-galaxy collection install redhatinsights.subscriptions`
-9. Create a text file called `inventory.ini` with the following content
+9. Create a text file called `inventory.ini` with the following content and insert the user you are using in the Linux system 
 ```
 localhost 
 
