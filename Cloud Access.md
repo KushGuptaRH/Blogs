@@ -102,7 +102,7 @@ ansible_connection=local
 
 ### Manual Entry
 Completing this method enables Cloud Access and Golden Images for an Azure subscription.
-**Note:** This method for accessing gold images is deprecated, and functionality will be removed once its replacement is finished over at the [Hybrid Cloud Console](https://console.redhat.com/).
+  - **Note:** This method for accessing gold images is deprecated, and functionality will be removed once its replacement is finished over at the [Hybrid Cloud Console](https://console.redhat.com/).
 1. Go to https://access.redhat.com/management/cloud in the Red Hat account you would like to connect
 2. Click the blue button that says “Enable a new provider”
 3. Select “Microsoft Azure” as the certified cloud provider
