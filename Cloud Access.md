@@ -34,7 +34,7 @@ The central concept to understanding how [Red Hat Enterprise Linux](https://www.
 ## Bring Your Own Subscription (BYOS)
 - Customers pay Red Hat for product subscriptions & support, and they pay the CCSP for cloud resource consumption.
   - Pre-paid & can use your Red Hat discount.
-- Cloud VMs deployed from a Custom Image or Gold Image.
+- Cloud VMs deployed from a [Custom Image](https://www.redhat.com/en/topics/linux/what-is-an-image-builder) or [Gold Image](https://www.redhat.com/en/topics/linux/what-is-a-golden-image).
 - It works identically to the on-premise subscription.
 - Ideal for obtaining consistency regardless of where your workloads are.
 
