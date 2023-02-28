@@ -17,7 +17,7 @@ These guidelines are not definitive, and Red Hat product and subscription eligib
 
 The central concept to understanding how [Red Hat Enterprise Linux](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux) (RHEL) specifically operates in the cloud is that RHEL images are available in the cloud as either an On-Demand / Pay as you go (PAYG) model from the cloud console or a bring-your-own-subscription (BYOS) model from Red Hat Cloud Access. There is a general comparison of the two models for procurement below. 
 
-### On-Demand / Pay As You Go (PAYG)
+## On-Demand / Pay As You Go (PAYG)
 - When a Red Hat customer uses a product made available by a Certified Cloud and Service Provider (CCSP) in a public image catalog or marketplace i.e. RHEL in AWS or Azure Marketplace.
   - Post-paid & cannot use your Red Hat discount.
   - The images are provided by the Cloud Provider.
@@ -31,7 +31,7 @@ The central concept to understanding how [Red Hat Enterprise Linux](https://www.
 - Ideal for taking advantage of the benefits associated with On-demand, such as no upfront cost, and no commitment or planning to obtain flexible computing capacity. 
 - You are charged for what you use.
 
-### Bring Your Own Subscription (BYOS)
+## Bring Your Own Subscription (BYOS)
 - Customers pay Red Hat for product subscriptions & support, and they pay the CCSP for cloud resource consumption.
   - Pre-paid & can use your Red Hat discount.
 - Cloud VMs deployed from a Custom Image or Gold Image.
@@ -43,8 +43,11 @@ Regardless of which model you use to obtain RHEL in the cloud, you have the opti
 What if you want to take advantage of convenient, flexible deployments while keeping Red Hat support and discounts? Red Hat’s 3rd party marketplace offerings on the cloud are our answer.
 
 I’ve listed the step-by-step instructions for enabling Red Hat Cloud Access to gain Bring Your Own Subscription capabilities in AWS & Azure at the end, here are links to the [reference documentation](https://access.redhat.com/documentation/en-us/red_hat_subscription_management/2022/html/red_hat_cloud_access_reference_guide/index) and the [FAQ](https://access.redhat.com/articles/3664231).
-### AWS
-#### Manual Method
+
+---
+
+## AWS
+### Manual Method
 The process will vary on the applications you chose to set up, I will go over the RHEL Management Bundle for Gold Image access. 
 1. Go to sources inside of the Hybrid Cloud Console - https://console.redhat.com/settings/sources
 2. Click “Amazon Web Services”
@@ -55,7 +58,7 @@ The process will vary on the applications you chose to set up, I will go over th
 7. Create a new role, select another AWS account by the ID specified, and attach the permissions policy you created in the last step
 8. Copy and paste the role ARN into the Red Hat console
 9. Review details and click “Add”
-#### Account Authorization
+### Account Authorization
 Use this method to register your AWS account and enjoy benefits such as instant access to Gold Images.
 1. Go to sources inside of the Hybrid Cloud Console - https://console.redhat.com/settings/sources
 2. Click “Amazon Web Services”
@@ -65,8 +68,8 @@ Use this method to register your AWS account and enjoy benefits such as instant 
 6. Configure the applications you would like to enable
     - Note: To obtain access to Red Hat gold images and subscription watch data, only the RHEL Management Bundle is needed
 7. Review the details and click “Add”
-### Azure
-#### Single Registration
+## Azure
+### Single Registration
 Use this method to register your Azure subscription and enjoy benefits such as instant access to Gold Images.
 1. Create a Linux VM running on the Azure subscription you would like to link and ssh into it
     - It should have an external disk attached to it at creation time with at least 8 GB of storage
@@ -97,7 +100,7 @@ ansible_connection=local
     - `ansible-playbook -i inventory.ini -b ~/.ansible/collections/ansible_collections/redhatinsights/subscriptions/playbooks/verify_account.yml -e rh_api_refresh_token=<OFFLINE_TOKEN>`
 12. If everything runs successfully, you can delete the VM. It is not needed for the source anymore. The connection can be managed at https://access.redhat.com/management/cloud under the Microsoft Azure Subscriptions section.
 
-#### Manual Entry
+### Manual Entry
 Completing this method enables Cloud Access and Golden Images for an Azure subscription.
 **Note:** This method for accessing gold images is deprecated, and functionality will be removed once its replacement is finished over at the [Hybrid Cloud Console](https://console.redhat.com/).
 1. Go to https://access.redhat.com/management/cloud in the Red Hat account you would like to connect
