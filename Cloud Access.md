@@ -7,7 +7,7 @@ Red Hat [Cloud Access](https://www.redhat.com/en/technologies/cloud-computing/cl
 How does it work in terms of product eligibility? If you have an unused, active Red Hat subscription with a cloud-compatible unit of measure (Core, vCPU, RAM, Virtual Guest, etc.), it’s probably eligible. 
 
 Some subscriptions that are not eligible include:
-- Virtual Datacenter or other unlimited RHEL guest subscriptions that require virt-who
+- Virtual Datacenter (VDC) or other unlimited RHEL guest subscriptions that require virt-who
   - **Unless** you are trying to run VDC on VMware Cloud (VMC), Azure VMware Solution (AVS), or Google Compute VMware Engine (GCVE).
   - Virtual Datacenter will apply to these VMware environments like on-premise subscriptions. 
 - Red Hat Virtualization products; nested virtualization is not supported
