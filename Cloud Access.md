@@ -73,7 +73,7 @@ Use this method to register your AWS account and enjoy benefits such as instant 
 Use this method to register your Azure subscription and enjoy benefits such as instant access to Gold Images.
 1. Create a Linux VM running on the Azure subscription you would like to link and ssh into it
     - It should have an external disk attached to it at creation time with at least 8 GB of storage
-    - It should be able to connect to the internet to access api.access.redhat.com
+    - It should be able to connect to the internet
 2. By default, you should enter the user's home directory
 3. Get or update pip
     - `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py | python3 get-pip.py`
