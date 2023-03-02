@@ -94,17 +94,29 @@ Use this method to register your Azure subscription and enjoy benefits such as i
     - It should be able to connect to the internet
 2. By default, you should enter the user's home directory
 3. Get or update pip
-    - `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py | python3 get-pip.py`
+```
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py | python3 get-pip.py
+```
 4. Install the package to create virtual environments
-    - `pip3 install virtualenv`
+```
+pip3 install virtualenv
+```
 5. Create a virtual environment called ansible
-    - `virtualenv -p $(which python3) ansible`
+```
+virtualenv -p $(which python3) ansible
+```
 6. Enter the virtual environment
-    - `source ansible/bin/activate`
+```
+source ansible/bin/activate
+```
 7. Install ansible and requests-oauthlib in the virtual environment
-    - `pip3 install ansible requests-oauthlib`
+```
+pip3 install ansible requests-oauthlib
+```
 8. Install the insights subscription collection
-    - `ansible-galaxy collection install redhatinsights.subscriptions`
+```
+ansible-galaxy collection install redhatinsights.subscriptions
+```
 9. Create a text file called `inventory.ini` with the following content and insert the user you are using in the Linux system 
 ```
 localhost 
@@ -115,7 +127,9 @@ ansible_connection=local
 ```
 10. Obtain a Red Hat offline token here to enter at the end of the next step: https://access.redhat.com/management/api
 11. Run the ansible playbook to send the necessary Azure Instance Metadata to Red Hat 
-    - `ansible-playbook -i inventory.ini -b ~/.ansible/collections/ansible_collections/redhatinsights/subscriptions/playbooks/verify_account.yml -e rh_api_refresh_token=<OFFLINE_TOKEN>`
+```
+ansible-playbook -i inventory.ini -b ~/.ansible/collections/ansible_collections/redhatinsights/subscriptions/playbooks/verify_account.yml -e rh_api_refresh_token=<OFFLINE_TOKEN>
+```
 12. If everything runs successfully, you can delete the VM. It is not needed for the source anymore. The connection can be managed at https://access.redhat.com/management/cloud under the Microsoft Azure Subscriptions section.
 
 ### Manual Entry
