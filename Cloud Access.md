@@ -29,7 +29,7 @@ The central concept to understanding how [Red Hat Enterprise Linux](https://www.
 - You have an approximation for how many machines are needed throughout the year.
 - You want to pre-pay to obtain Red Hat discounts.
 - You want support directly from Red Hat.
-- You do not want software premiums that increase with your increases to virtual node size (compute and memory).
+- You do **not** want software premiums that increase with your increases to virtual node size (compute and memory).
   - That is the case for PAYG, however a RHEL subscription entitles a customer to [two virtual nodes regardless of virtual sockets](https://www.redhat.com/en/resources/red-hat-enterprise-linux-subscription-guide#section-5:~:text=two%20virtual%20nodes%20regardless%20of%20virtual%20sockets). 
 - You want to utilize custom or gold images.
 
