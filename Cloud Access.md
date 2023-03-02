@@ -60,7 +60,7 @@ Regardless of which model you use to obtain RHEL in the cloud, you have the opti
 
 What if you want to take advantage of convenient, flexible deployments while keeping Red Hat support and discounts? Red Hat’s 3rd party marketplace offerings on the cloud are our answer.
 
-I’ve listed step-by-step instructions for enabling Red Hat Cloud Access to gain Bring Your Own Subscription capabilities in AWS & Azure at the end, here are links to the [reference documentation](https://access.redhat.com/documentation/en-us/red_hat_subscription_management/2022/html/red_hat_cloud_access_reference_guide/index) and the [FAQ](https://access.redhat.com/articles/3664231).
+I’ve listed step-by-step instructions for enabling Red Hat Cloud Access to gain Bring Your Own Subscription capabilities in AWS & Azure at the end, here are links to the [reference documentation](https://access.redhat.com/documentation/en-us/red_hat_subscription_management/2022/html/red_hat_cloud_access_reference_guide/index) and the [FAQ](https://access.redhat.com/articles/3664231). We also have [technical documentation](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/deploying_red_hat_enterprise_linux_9_on_public_cloud_platforms/index) on deploying RHEL on public cloud platforms.
 
 ---
 
