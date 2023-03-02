@@ -1,8 +1,8 @@
 # How to Deploy RHEL in the Cloud
 ### By: Kush Gupta
-One of Red Hat’s greatest strengths is enabling the deployment of most products wherever you want. From a bare metal server to virtualization, major public clouds, & the edge, we help you make it happen. I hope to clarify topics around how & why to do this in the cloud and help you make the best decisions when using Red Hat Enterprise Linux (RHEL) outside of your data center.
+One of Red Hat’s greatest strengths is enabling the deployment of most products wherever you want. From a bare metal server to virtualization, major public clouds, and the edge, we help you make it happen. I hope to clarify topics around how and why to do this in the cloud and help you make the best decisions when using Red Hat Enterprise Linux (RHEL) outside of your data center.
 
-Red Hat [Cloud Access](https://www.redhat.com/en/technologies/cloud-computing/cloud-access) is a program designed to provide subscription portability for those who want to use their Red Hat subscriptions in the cloud. It is a path towards creating open hybrid cloud infrastructures built on Red Hat technologies. The program is available with **most** Red Hat subscriptions at **no extra cost**. It allows you to keep the benefits of Red Hat subscriptions (including our [support](https://www.redhat.com/en/services/support) and discounts) and provides access to value-add capabilities like [gold images](https://www.redhat.com/en/topics/linux/what-is-a-golden-image), and the [Azure Hybrid Benefit for Linux](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/azure-hybrid-benefit-linux). Cloud Access lets you set up account-level registration tooling that auto-connects to the Red Hat [Hybrid Cloud Console](https://cloud.redhat.com/). To unify reporting of your subscriptions across the data center and the clouds & get predictive analytics, Cloud Access also helps you enable [Subscription Watch](https://access.redhat.com/articles/4897921) and [Insights](https://www.redhat.com/en/technologies/management/insights).
+Red Hat [Cloud Access](https://www.redhat.com/en/technologies/cloud-computing/cloud-access) is a program designed to provide subscription portability for those who want to use their Red Hat subscriptions in the cloud. It is a path towards creating open hybrid cloud infrastructures built on Red Hat technologies. The program is available with most Red Hat subscriptions at no extra cost. It allows you to keep the benefits of Red Hat subscriptions (including our [support](https://www.redhat.com/en/services/support) and discounts) and provides access to value-add capabilities like [gold images](https://www.redhat.com/en/topics/linux/what-is-a-golden-image), and the [Azure Hybrid Benefit for Linux](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/azure-hybrid-benefit-linux). Cloud Access lets you set up account-level registration tooling that auto-connects to the Red Hat [Hybrid Cloud Console](https://cloud.redhat.com/). To unify reporting of your subscriptions across the data center and the clouds, and get predictive analytics, Cloud Access also helps you enable [Subscription Watch](https://access.redhat.com/articles/4897921) and [Insights](https://www.redhat.com/en/technologies/management/insights).
 
 How does it work in terms of product eligibility? If you have an unused, active Red Hat subscription with a cloud-compatible unit of measure (Core, vCPU, RAM, Virtual Guest, etc.), it’s probably eligible. 
 
@@ -15,21 +15,34 @@ Some subscriptions that are not eligible include:
 
 These guidelines are not definitive, and Red Hat product and subscription eligibility change over time as cloud providers and Red Hat introduce new products and capabilities. Refer to the Red Hat product documentation for specific details about the product’s use on a public cloud infrastructure.
 
-The central concept to understanding how [Red Hat Enterprise Linux](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux) (RHEL) specifically operates in the cloud is that RHEL images are available in the cloud as either an On-Demand / Pay as you go (PAYG) model from the cloud console or a bring-your-own-subscription (BYOS) model from Red Hat Cloud Access. There is a general comparison of the two models for procurement below. 
+The central concept to understanding how [Red Hat Enterprise Linux](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux) (RHEL) specifically operates in the cloud is that RHEL images are available in the cloud as either an On-Demand / Pay as you go (PAYG) model from the cloud console or a bring-your-own-subscription (BYOS) model from Red Hat Cloud Access. When would you do one or the other, and what gets you to cost optimization? It’s going to depend on what you are looking to do with the machines. Let's go over some common scenarios to see which method of procurment helps the most.
+
+#### Scenarios that are best suited for PAYG include the following: 
+- You are uncertain about the number of machines, capacity, or utilization needed throughout the year.
+- You want the ability to terminate the deployments at any time and stop paying for them.
+  - This lets you pay only for what is used.
+- You do not need support directly from Red Hat.
+- You only need to run these machines in the cloud.
+- You do not want any upfront costs or commitment to obtain flexible computing capacity.
+
+#### Scenarios that are best suited for BYOS include the following:
+- You have an approximation for how many machines are needed throughout the year.
+- You want to pre-pay to obtain Red Hat discounts.
+- You want support directly from Red Hat.
+- You do not want software premiums that increase with your increases to virtual node size (compute and memory).
+  - That is the case for PAYG, however a RHEL subscription entitles a customer to [two virtual nodes regardless of virtual sockets](https://www.redhat.com/en/resources/red-hat-enterprise-linux-subscription-guide#section-5:~:text=two%20virtual%20nodes%20regardless%20of%20virtual%20sockets). 
+- You want to utilize custom or gold images.
+
+Here is a general comparison of the two models for procurement: 
 
 ## On-Demand / Pay As You Go (PAYG)
-- When a Red Hat customer uses a product made available by a Certified Cloud and Service Provider (CCSP) in a public image catalog or marketplace i.e. RHEL in AWS or Azure Marketplace.
-  - Post-paid & cannot use your Red Hat discount.
-  - The images are provided by the Cloud Provider.
-  - These images can be used only within the cloud environment for cloud instances.
-- The Red Hat subscription cost is built into the offering and has premium pricing due to the ability to terminate the instance at any time.
-  - For a virtual instance running throughout the entire year with 100% utilization, it is always cheaper to pre-pay for the subscription. 
-  - As your virtual compute and RAM sizes increase, so do your software premiums. 
-    - This is **not** how RHEL subscriptions work. One server subscription can cover [two virtual nodes regardless of size](https://www.redhat.com/en/resources/red-hat-enterprise-linux-subscription-guide#section-5). 
-  - It gets trickier when utilization is below 100% & sizing differs to get your break-even cost point. To obtain cost optimization, you can use the [AWS](https://calculator.aws/#/) or [Azure](https://azure.microsoft.com/en-us/pricing/calculator/) calculators compared to your subscription costs.
+- When a Red Hat customer uses a product made available by a Certified Cloud and Service Provider (CCSP) in a public image catalog.
+  - Post-paid & cannot use your Red Hat discount. You are only charged for what you use.
+  - The images are provided by the Cloud Provider, and can be used only within the cloud environment.
+- The Red Hat subscription cost is built into the offering through a software premium.
 - Customers get support directly from the cloud provider.
-- Ideal for taking advantage of the benefits associated with On-demand, such as no upfront cost, and no commitment or planning to obtain flexible computing capacity. 
-- You are charged for what you use.
+- Ideal for taking advantage of the benefits associated with on-demand, such as no upfront cost, and no commitment or planning to obtain flexible computing capacity. 
+
 
 ## Bring Your Own Subscription (BYOS)
 - Customers pay Red Hat for product subscriptions & support, and they pay the CCSP for cloud resource consumption.
