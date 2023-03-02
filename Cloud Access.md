@@ -126,7 +126,7 @@ ansible_python_interpreter=/home/<USERNAME>/ansible/bin/python3
 ansible_connection=local
 ```
 10. Obtain a Red Hat offline token here to enter at the end of the next step: https://access.redhat.com/management/api
-11. Run the ansible playbook to send the necessary Azure Instance Metadata to Red Hat 
+11. Run the ansible playbook to send the necessary Azure Instance Metadata to Red Hat and replace `<OFFLINE_TOKEN>` with the token obtained from the last step
 ```
 ansible-playbook -i inventory.ini -b ~/.ansible/collections/ansible_collections/redhatinsights/subscriptions/playbooks/verify_account.yml -e rh_api_refresh_token=<OFFLINE_TOKEN>
 ```
