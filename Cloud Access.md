@@ -20,7 +20,7 @@ Some subscriptions that are not eligible include:
 
 These guidelines are not definitive, and Red Hat product and subscription eligibility change over time as cloud providers and Red Hat introduce new products and capabilities. Refer to the Red Hat product documentation for specific details about the product’s use on a public cloud infrastructure.
 
-The central concept to understanding how [Red Hat Enterprise Linux](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux) (RHEL) specifically operates in the cloud is that RHEL images are available in the cloud as either an On-Demand / Pay as you go (PAYG) model from the cloud console or a bring-your-own-subscription (BYOS) model from Red Hat Cloud Access. When would you do one or the other, and what gets you to cost optimization? It’s going to depend on what you are looking to do with the machines. Let's go over some common scenarios to see which method of procurment helps the most.
+The central concept to understanding how [Red Hat Enterprise Linux](https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux) (RHEL) specifically operates in the cloud is that RHEL images are available in the cloud as either an On-Demand / Pay as you go (PAYG) model from the cloud console or a bring-your-own-subscription (BYOS) model from Red Hat Cloud Access. When would you do one or the other, and what gets you to cost optimization? It’s going to depend on what you are looking to do with the machines. Let's go over some common scenarios and see which method of procurment is best.
 
 #### Scenarios that are best suited for PAYG include the following: 
 - You are uncertain about the number of machines, capacity, or utilization needed throughout the year.
