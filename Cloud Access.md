@@ -1,5 +1,10 @@
+<p align="center">
+  <img src="https://www.redhat.com/cms/managed-files/styles/max_size/s3/RH_BRAND_MCS-illustration.png?itok=ADujQIht" alt="Hybrid Cloud Grapic" width="500" height="500"/>
+</p>
+
 # How to Deploy RHEL in the Cloud
 ### By: Kush Gupta
+
 One of Red Hat’s greatest strengths is enabling the deployment of most products wherever you want. From a bare metal server to virtualization, major public clouds, and the edge, we help you make it happen. I hope to clarify topics around how and why to do this in the cloud and help you make the best decisions when using Red Hat Enterprise Linux (RHEL) outside of your data center.
 
 Red Hat [Cloud Access](https://www.redhat.com/en/technologies/cloud-computing/cloud-access) is a program designed to provide subscription portability for those who want to use their Red Hat subscriptions in the cloud. It is a path towards creating open hybrid cloud infrastructures built on Red Hat technologies. The program is available with most Red Hat subscriptions at no extra cost. It allows you to keep the benefits of Red Hat subscriptions (including our [support](https://www.redhat.com/en/services/support) and discounts) and provides access to value-add capabilities like [gold images](https://www.redhat.com/en/topics/linux/what-is-a-golden-image), and the [Azure Hybrid Benefit for Linux](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/azure-hybrid-benefit-linux). Cloud Access lets you set up account-level registration tooling that auto-connects to the Red Hat [Hybrid Cloud Console](https://cloud.redhat.com/). To unify reporting of your subscriptions across the data center and the clouds, and get predictive analytics, Cloud Access also helps you enable [Subscription Watch](https://access.redhat.com/articles/4897921) and [Insights](https://www.redhat.com/en/technologies/management/insights).
