@@ -40,7 +40,7 @@ The central concept to understanding how [Red Hat Enterprise Linux](https://www.
 
 Here is a general comparison of the two models for procurement: 
 
-## On-Demand / Pay As You Go (PAYG)
+### On-Demand / Pay As You Go (PAYG)
 - When a Red Hat customer uses a product made available by a Certified Cloud and Service Provider (CCSP) in a public image catalog.
   - Post-paid & cannot use your Red Hat discount. You are only charged for what you use.
   - The images are provided by the Cloud Provider, and can be used only within the cloud environment.
@@ -49,7 +49,7 @@ Here is a general comparison of the two models for procurement:
 - Ideal for taking advantage of the benefits associated with on-demand, such as no upfront cost, and no commitment or planning to obtain flexible computing capacity. 
 
 
-## Bring Your Own Subscription (BYOS)
+### Bring Your Own Subscription (BYOS)
 - Customers pay Red Hat for product subscriptions & support, and they pay the CCSP for cloud resource consumption.
   - Pre-paid & can use your Red Hat discount.
 - Cloud VMs deployed from a [Custom Image](https://www.redhat.com/en/topics/linux/what-is-an-image-builder) or [Gold Image](https://www.redhat.com/en/topics/linux/what-is-a-golden-image).
